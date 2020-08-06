@@ -1,11 +1,18 @@
 <?php
+    //defined('BASEPATH') OR exit('No direct script access allowed');
+
     class book_details extends CI_Controller{
 
-        function index(){
+       public function __contruct(){
 
-            $this->load->model("book_model");
-            $data["UserArray"]= $this->book_model->return_books();
-            $this->load->view("home",$data);
+            parent::__construct();
+            $this->load->model('book_model','bm');  
+        }
+
+        public function index(){
+            $data['info']= $this->bm->get_books();
+
+            $this->load->view('home',$data);
         }
     }
 ?>

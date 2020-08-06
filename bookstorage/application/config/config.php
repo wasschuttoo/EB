@@ -23,8 +23,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://http://localhost/bookstorage';
-
+if ($_SERVER['HTTP_HOST']=='localhost') {
+    $config['base_url'] = 'http://localhost/bookstorage/';
+}else{
+    $config['base_url'] = "#";
+}
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -35,7 +38,7 @@ $config['base_url'] = 'http://http://localhost/bookstorage';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------

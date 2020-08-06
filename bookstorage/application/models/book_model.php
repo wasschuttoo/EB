@@ -1,13 +1,12 @@
 <?php
     class book_model extends CI_Model{
 
-        function return_books(){
-            $this->load->database();
+        public function get_books(){
 
-            $query = $this->db->query("SELECT * FROM book");
-
-            $query->result_array();
-            return $query->result_array();
+            $query="SELECT * FROM book";
+            $sql= $this->db->query($query);
+            return $sql->result_object();
+            
         }
     }
 ?>
