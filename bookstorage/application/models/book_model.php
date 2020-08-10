@@ -3,10 +3,11 @@
 
         public function get_books(){
 
-            $query="SELECT * FROM book";
-            $sql= $this->db->query($query);
-            return $sql->result_object();
-            
-        }
+            $this->db->select('*');
+            $this->db->from('book');
+
+            $query = $this->db->get();
+            return $query->result_array();  
+        }   
     }
 ?>

@@ -9,12 +9,14 @@
 
             <td>
                 <table>
-                <tr><td>thwh</td></tr>
+                <tr><td><input type ></td></tr>
                 <tr><td>bsebbe</td></tr>
                 <tr><td>wywyvwvrtw</td></tr>
                 </table>
             </td>
         </tr>
+        <td></td>
+        <td><button type="button" name="create" >CREATE <i class="fas fa-plus-circle"></i></button></td>
     </table>
  </body>
 </html>
